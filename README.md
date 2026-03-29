@@ -1,78 +1,63 @@
-🇧🇷 Português | 🇺🇸 [English](#english)
+# ADVPL — Customizações TOTVS Protheus
 
-# ADVPL — Estudos em TOTVS Protheus
-
-Exemplos e exercícios em **ADVPL** (Advanced Protheus Language) para desenvolvimento no ERP TOTVS Protheus.
-
-## Conteúdo
-
-### `AutoresMVC.prw` — Cadastro de Autores com FWMBrowse (MVC)
-
-Rotina MVC usando `FwmBrowse` para gerenciar o cadastro de autores na tabela `SZ2`.
-
-```advpl
-User Function AutoresMVC()
-    local oBrowse
-    oBrowse := FwmBrowse():NEW
-    oBrowse:SetAlias('SZ2')
-    oBrowse:SetDescription("Cadastro de Autores")
-    oBrowse:Activate()
-Return
-```
-
-### `soma.prw` — Função básica com Alert
-
-```advpl
-User Function soma()
-    local nNum1 := 20
-    local nNum2 := 10
-    Alert(nNum1 + nNum2)  // Exibe: 30
-Return
-```
-
-## Conceitos abordados
-
-- `User Function`, variáveis locais, `Alert()`
-- Componente `FwmBrowse` (MVC Browse)
-- Documentação com `{Protheus.doc}`
-
-## Pré-requisitos
-
-- TOTVS Protheus + TDS (TOTVS Developer Studio)
-
-## Autor
-
-Hiago Silva — Dezembro/2025
+🇧🇷 **Português** | 🇺🇸 [English](#english)
 
 ---
 
-<a name="english"></a>
-🇧🇷 [Português](#) | 🇺🇸 English
+## Português
 
-# ADVPL — TOTVS Protheus Studies
+Coleção de programas ADVPL (Advanced Protheus Language) para customização do ERP TOTVS Protheus, incluindo CRUD MVC com FwmBrowse.
 
-Examples and exercises in **ADVPL** (Advanced Protheus Language) for development in the TOTVS Protheus ERP.
+### O que contém
+- **`AutoresMVC.prw`**: Browse MVC para a tabela `SZ2` usando `FwmBrowse`
+  - Implementa o padrão MVC do framework Protheus
+  - Tela de listagem, inclusão, alteração e exclusão de autores
 
-## Contents
+### Padrão MVC Protheus
+```advpl
+// FwmBrowse → modelo de dados MVC
+// SZ2 = tabela customizada de autores
+FUNCTION AutoresMVC()
+    FwmBrowse(...)
+RETURN
+```
 
-### `AutoresMVC.prw` — Author Registration with FWMBrowse (MVC)
+### Requisitos
+- **TOTVS Protheus** 12.x ou superior
+- Compilador ADVPL (TotvsDevStudio ou AppServer)
+- Dicionário de dados com tabela SZ2 configurada
 
-MVC routine using `FwmBrowse` to manage the author registration table `SZ2`.
+### Como compilar
+1. Abra o TotvsDevStudio
+2. Importe os arquivos `.prw`
+3. Compile e associe ao menu do Protheus
 
-### `soma.prw` — Basic function with Alert
+---
 
-Simple arithmetic function demonstrating ADVPL syntax.
+## English
 
-## Concepts covered
+Collection of ADVPL (Advanced Protheus Language) programs for customizing the TOTVS Protheus ERP, including MVC CRUD with FwmBrowse.
 
-- `User Function`, local variables, `Alert()`
-- `FwmBrowse` MVC component
-- `{Protheus.doc}` documentation
+### Contents
+- **`AutoresMVC.prw`**: MVC Browse for table `SZ2` using `FwmBrowse`
+  - Implements Protheus framework MVC pattern
+  - List, create, update, and delete screen for authors
 
-## Prerequisites
+### Protheus MVC pattern
+```advpl
+// FwmBrowse → MVC data model
+// SZ2 = custom authors table
+FUNCTION AutoresMVC()
+    FwmBrowse(...)
+RETURN
+```
 
-- TOTVS Protheus + TDS (TOTVS Developer Studio)
+### Requirements
+- **TOTVS Protheus** 12.x or higher
+- ADVPL compiler (TotvsDevStudio or AppServer)
+- Data dictionary with SZ2 table configured
 
-## Author
-
-Hiago Silva — December/2025
+### How to compile
+1. Open TotvsDevStudio
+2. Import `.prw` files
+3. Compile and link to Protheus menu
