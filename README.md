@@ -1,3 +1,5 @@
+🇧🇷 Português | 🇺🇸 [English](#english)
+
 # ADVPL — Estudos em TOTVS Protheus
 
 Exemplos e exercícios em **ADVPL** (Advanced Protheus Language) para desenvolvimento no ERP TOTVS Protheus.
@@ -6,7 +8,7 @@ Exemplos e exercícios em **ADVPL** (Advanced Protheus Language) para desenvolvi
 
 ### `AutoresMVC.prw` — Cadastro de Autores com FWMBrowse (MVC)
 
-Rotina MVC utilizando o componente `FwmBrowse` para exibir e gerenciar o cadastro de autores na tabela `SZ2`.
+Rotina MVC usando `FwmBrowse` para gerenciar o cadastro de autores na tabela `SZ2`.
 
 ```advpl
 User Function AutoresMVC()
@@ -18,38 +20,59 @@ User Function AutoresMVC()
 Return
 ```
 
-### `soma.prw` — Função básica de soma com Alert
-
-Exemplo introdutório de função ADVPL com operações aritméticas e exibição de resultado.
+### `soma.prw` — Função básica com Alert
 
 ```advpl
 User Function soma()
     local nNum1 := 20
     local nNum2 := 10
-    soma := (nNum1 + nNum2)
-    Alert(soma)   // Exibe: 30
+    Alert(nNum1 + nNum2)  // Exibe: 30
 Return
 ```
 
 ## Conceitos abordados
 
-- Estrutura de funções `User Function`
-- Variáveis locais com `local`
+- `User Function`, variáveis locais, `Alert()`
 - Componente `FwmBrowse` (MVC Browse)
 - Documentação com `{Protheus.doc}`
-- `Alert()` para exibição de mensagens
 
 ## Pré-requisitos
 
-- TOTVS Protheus (qualquer versão compatível com ADVPL)
-- IDE: TDS (TOTVS Developer Studio) ou VS Code com extensão ADVPL
-
-## Como usar
-
-1. Abra o TDS e conecte ao ambiente Protheus
-2. Importe os arquivos `.prw`
-3. Compile (`F9`) e execute via **Executar Função**
+- TOTVS Protheus + TDS (TOTVS Developer Studio)
 
 ## Autor
 
 Hiago Silva — Dezembro/2025
+
+---
+
+<a name="english"></a>
+🇧🇷 [Português](#) | 🇺🇸 English
+
+# ADVPL — TOTVS Protheus Studies
+
+Examples and exercises in **ADVPL** (Advanced Protheus Language) for development in the TOTVS Protheus ERP.
+
+## Contents
+
+### `AutoresMVC.prw` — Author Registration with FWMBrowse (MVC)
+
+MVC routine using `FwmBrowse` to manage the author registration table `SZ2`.
+
+### `soma.prw` — Basic function with Alert
+
+Simple arithmetic function demonstrating ADVPL syntax.
+
+## Concepts covered
+
+- `User Function`, local variables, `Alert()`
+- `FwmBrowse` MVC component
+- `{Protheus.doc}` documentation
+
+## Prerequisites
+
+- TOTVS Protheus + TDS (TOTVS Developer Studio)
+
+## Author
+
+Hiago Silva — December/2025
